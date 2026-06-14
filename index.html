@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI / 品牌视觉设计报价参考</title>
+  <style>
+    :root {
+      --bg: #f5f8f6;
+      --paper: rgba(255,255,255,0.78);
+      --paper-strong: #ffffff;
+      --ink: #17322a;
+      --muted: #587066;
+      --line: rgba(23, 50, 42, 0.12);
+      --accent: #6d9886;
+      --accent-soft: #dce9e3;
+      --accent-deep: #44685b;
+      --shadow: 0 20px 60px rgba(53, 88, 77, 0.08);
+      --radius: 24px;
+      --max: 1080px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Helvetica Neue", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(182, 212, 198, 0.28), transparent 28%),
+        radial-gradient(circle at top right, rgba(219, 233, 227, 0.9), transparent 32%),
+        linear-gradient(180deg, #f7fbf8 0%, #eef5f1 100%);
+      line-height: 1.7;
+      letter-spacing: 0.01em;
+    }
+
+    .page {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 32px 0 72px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 48px;
+      border: 1px solid rgba(255,255,255,0.65);
+      border-radius: 32px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(247,251,248,0.72));
+      backdrop-filter: blur(14px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -60px -80px auto;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(109, 152, 134, 0.22), rgba(109, 152, 134, 0));
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+
+    h1 {
+      margin: 22px 0 10px;
+      font-size: clamp(34px, 5vw, 60px);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      max-width: 700px;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .hero-grid {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .hero-card {
+      padding: 18px 18px 20px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(23,50,42,0.08);
+    }
+
+    .hero-card .label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .hero-card .value {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+
+    .section {
+      margin-top: 22px;
+      padding: 34px;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(255,255,255,0.8);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .section-head {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+
+    .section-index {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent-deep);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 8px 0 0;
+      font-size: 30px;
+      letter-spacing: -0.02em;
+    }
+
+    .desc {
+      margin: 0;
+      color: var(--muted);
+      max-width: 700px;
+      font-size: 15px;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .pricing-card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(244,249,246,0.92));
+      min-height: 180px;
+    }
+
+    .pricing-card h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .pricing-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .price {
+      margin: 18px 0 0;
+      font-size: clamp(26px, 4vw, 36px);
+      line-height: 1.1;
+      font-weight: 750;
+      letter-spacing: -0.03em;
+      color: var(--accent-deep);
+    }
+
+    .note-box {
+      margin-top: 18px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+      font-size: 14px;
+    }
+
+    .workflow {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .workflow-panel,
+    .aside-panel {
+      padding: 22px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(242,248,244,0.9));
+    }
+
+    .workflow-panel h3,
+    .aside-panel h3 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    li + li { margin-top: 10px; }
+
+    .footer {
+      margin-top: 22px;
+      padding: 24px 30px 8px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .divider {
+      margin: 20px 0 0;
+      width: 72px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      border: 0;
+    }
+
+    @media (max-width: 900px) {
+      .hero { padding: 32px 24px; }
+      .section { padding: 26px 20px; }
+      .hero-grid,
+      .pricing-grid,
+      .workflow { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { width: 100%; padding: 0; }
+      .hero, .section { box-shadow: none; background: #fff; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="eyebrow">UI / Brand / AI Workflow</div>
+      <h1>UI / 品牌视觉设计<br>报价参考</h1>
+      <p class="subtitle">
+        适用于 AI 产品、官网视觉与品牌基础搭建的阶段性合作。此版本主要用于前期预算评估与合作方向参考，最终报价会根据实际范围与复杂度进一步确认。
+      </p>
+
+      <div class="hero-grid">
+        <div class="hero-card">
+          <div class="label">App 阶段设计</div>
+          <div class="value">¥30,000 – ¥50,000</div>
+        </div>
+        <div class="hero-card">
+          <div class="label">官网整体设计</div>
+          <div class="value">¥20,000 – ¥30,000</div>
+        </div>
+        <div class="hero-card">
+          <div class="label">品牌 / AI 工作流</div>
+          <div class="value">¥10,000 – ¥27,000</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="section-index">01 / App 产品设计</div>
+          <h2>产品视觉按页面与阶段拆分</h2>
+        </div>
+        <p class="desc">适用于产品首页、核心流程、重点功能页以及一个阶段内的核心产品界面设计。</p>
+      </div>
+      <hr class="divider">
+      <div class="pricing-grid">
+        <article class="pricing-card">
+          <h3>关键页面</h3>
+          <p>适用于首页、核心流程页、重点功能页、关键转化页等。</p>
+          <div class="price">¥1,500 – ¥3,000 / 页</div>
+        </article>
+        <article class="pricing-card">
+          <h3>普通页面</h3>
+          <p>适用于设置页、信息展示页、辅助页面等相对标准化页面。</p>
+          <div class="price">¥800 – ¥1,500 / 页</div>
+        </article>
+        <article class="pricing-card" style="grid-column: 1 / -1; min-height: 0;">
+          <h3>App 整体阶段设计</h3>
+          <p>适用于一个阶段内的核心产品界面设计，可按功能模块或产品版本整体评估。</p>
+          <div class="price">¥30,000 – ¥50,000</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="section-index">02 / 官网设计</div>
+          <h2>更适合按整体项目评估</h2>
+        </div>
+        <p class="desc">适用于官网首页及核心内页的阶段性视觉设计，适合先形成一个整体预算区间。</p>
+      </div>
+      <hr class="divider">
+      <div class="pricing-grid">
+        <article class="pricing-card" style="grid-column: 1 / -1; min-height: 0;">
+          <h3>官网整体设计</h3>
+          <p>适用于官网首页及核心内页的阶段性视觉设计，包含整体视觉语言与页面风格统一。</p>
+          <div class="price">¥20,000 – ¥30,000</div>
+        </article>
+      </div>
+      <div class="note-box">
+        如后续需求更明确，也可以再按首页、核心内页或某个专题落地页进一步细化报价。
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="section-index">03 / 品牌视觉</div>
+          <h2>品牌基础与完整 VI 可分层评估</h2>
+        </div>
+        <p class="desc">适用于品牌气质、色彩、字体、基础视觉语言的建立与统一，也可扩展到完整品牌 VI。</p>
+      </div>
+      <hr class="divider">
+      <div class="pricing-grid">
+        <article class="pricing-card">
+          <h3>品牌视觉基础搭建</h3>
+          <p>适用于品牌方向梳理、基础风格、色彩与字体气质的建立。</p>
+          <div class="price">¥15,000 – ¥20,000</div>
+        </article>
+        <article class="pricing-card">
+          <h3>完整品牌 VI</h3>
+          <p>适用于更完整的视觉规范、应用延展与品牌表达系统搭建。</p>
+          <div class="price">¥27,000 起</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="section-index">04 / AI 工作流协作</div>
+          <h2>把关键设计判断和 AI 协作结合起来</h2>
+        </div>
+        <p class="desc">适用于页面较多、节奏较快，或者团队已有执行设计师、但希望进一步提升效率与一致性的项目。</p>
+      </div>
+      <hr class="divider">
+      <div class="workflow">
+        <div class="workflow-panel">
+          <h3>AI 工作流协作支持</h3>
+          <ul>
+            <li>先完成关键页面与视觉方向定义，再把可复用的页面结构沉淀下来。</li>
+            <li>后续针对标准化页面，可结合 AI workflow 提升初稿输出效率。</li>
+            <li>协助梳理页面输出逻辑、视觉规范与协作方式，降低重复沟通成本。</li>
+            <li>在保证效率的同时，尽量维持整体设计语言与体验一致性。</li>
+          </ul>
+        </div>
+        <aside class="aside-panel">
+          <h3>参考报价</h3>
+          <div class="price">¥10,000 – ¥20,000</div>
+          <p style="margin-top: 10px; color: var(--muted); font-size: 14px;">
+            可作为独立协作阶段，也可以与实际设计项目一起统筹评估。
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="section-index">05 / 补充说明</div>
+          <h2>当前版本用于前期预算参考</h2>
+        </div>
+      </div>
+      <hr class="divider">
+      <ul>
+        <li>以上为阶段性参考报价，便于前期评估预算范围与合作方向。</li>
+        <li>最终价格将根据页面数量、复杂度、交付要求及合作范围进一步确认。</li>
+        <li>如项目范围更明确，也可按单个专题或单个阶段进行整体报价。</li>
+      </ul>
+    </section>
+
+    <div class="footer">
+      UI / 品牌视觉设计报价参考 · Draft v1
+    </div>
+  </main>
+</body>
+</html>
