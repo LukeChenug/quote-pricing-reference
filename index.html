@@ -6,32 +6,32 @@
   <title>AI 医疗 / 心理健康产品设计合作报价参考</title>
   <style>
     :root {
-      --bg: #0b0d10;
-      --panel: #0e1115;
-      --panel-soft: #12161b;
-      --ink: #f3efe6;
-      --text: rgba(243,239,230,0.9);
-      --muted: rgba(243,239,230,0.56);
-      --muted-2: rgba(243,239,230,0.34);
-      --line: rgba(243,239,230,0.09);
-      --line-strong: rgba(243,239,230,0.16);
-      --accent: #8ea9b9;
-      --accent-soft: rgba(142,169,185,0.12);
+      --parchment: #f5f4ed;
+      --ivory: #faf9f5;
+      --warm-sand: #e8e6dc;
+      --brand: #1B365D;
+      --brand-light: #2D5A8A;
+      --near-black: #141413;
+      --dark-warm: #3d3d3a;
+      --olive: #504e49;
+      --stone: #6b6a64;
+      --border: #e8e6dc;
+      --border-soft: #e5e3d8;
+      --tag-bg: #E4ECF5;
       --max: 980px;
-      --serif: "Times New Roman", "Iowan Old Style", "Palatino Linotype", Georgia, "Songti SC", "STSong", serif;
-      --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", sans-serif;
+      --serif: Charter, Georgia, "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", Palatino, serif;
+      --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
       --mono: "SF Mono", "JetBrains Mono", Menlo, monospace;
     }
 
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; }
     body {
-      background:
-        radial-gradient(circle at 10% 0%, rgba(147,184,199,0.10), transparent 24%),
-        linear-gradient(180deg, #090b0e 0%, #0d1014 100%);
-      color: var(--text);
+      background: var(--parchment);
+      color: var(--near-black);
       font-family: var(--sans);
-      line-height: 1.7;
+      line-height: 1.55;
+      letter-spacing: 0.01em;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -39,7 +39,7 @@
     .page {
       max-width: var(--max);
       margin: 0 auto;
-      padding: 92px 52px 110px;
+      padding: 88px 56px 120px;
     }
 
     .eyebrow {
@@ -47,9 +47,10 @@
       align-items: center;
       gap: 12px;
       font-size: 12px;
-      letter-spacing: 0.16em;
+      font-weight: 500;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: var(--stone);
       margin-bottom: 18px;
     }
 
@@ -57,51 +58,52 @@
       content: "";
       width: 28px;
       height: 1px;
-      background: linear-gradient(90deg, var(--accent), transparent);
+      background: linear-gradient(90deg, var(--brand), transparent);
     }
 
     .hero {
       padding-bottom: 40px;
-      margin-bottom: 42px;
-      border-bottom: 1px solid var(--line-strong);
+      margin-bottom: 48px;
+      border-bottom: 1px solid var(--border-soft);
     }
 
     h1 {
       margin: 0;
       font-family: var(--serif);
-      font-size: clamp(46px, 6vw, 78px);
-      line-height: 1.01;
-      letter-spacing: -0.05em;
+      font-size: clamp(48px, 6vw, 82px);
+      line-height: 1.02;
+      letter-spacing: -0.045em;
       font-weight: 500;
-      color: var(--ink);
+      color: var(--near-black);
       max-width: 720px;
     }
 
     .subtitle {
       margin: 20px 0 0;
       max-width: 720px;
-      color: var(--muted);
+      color: var(--olive);
       font-size: 14px;
+      line-height: 1.55;
     }
 
     .hero-meta {
-      margin-top: 30px;
+      margin-top: 28px;
       display: flex;
       flex-wrap: wrap;
       gap: 22px;
-      color: var(--muted-2);
+      color: var(--stone);
       font-size: 11px;
       letter-spacing: 0.10em;
       text-transform: uppercase;
     }
 
     .hero-meta span b {
-      color: var(--text);
+      color: var(--dark-warm);
       font-weight: 500;
     }
 
     section {
-      margin-bottom: 38px;
+      margin-bottom: 42px;
     }
 
     .section-head {
@@ -110,11 +112,11 @@
       gap: 22px;
       padding-bottom: 16px;
       margin-bottom: 20px;
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid var(--border-soft);
     }
 
     .section-index {
-      color: var(--muted-2);
+      color: var(--stone);
       font-size: 12px;
       letter-spacing: 0.14em;
       text-transform: uppercase;
@@ -126,9 +128,9 @@
       font-family: var(--serif);
       font-size: 32px;
       line-height: 1.12;
-      letter-spacing: -0.035em;
+      letter-spacing: -0.03em;
       font-weight: 500;
-      color: var(--ink);
+      color: var(--near-black);
     }
 
     .grid-2 {
@@ -145,7 +147,7 @@
       font-size: 21px;
       line-height: 1.22;
       font-weight: 500;
-      color: var(--ink);
+      color: var(--near-black);
       letter-spacing: -0.02em;
     }
 
@@ -154,23 +156,20 @@
       margin: 0;
       padding: 0;
       list-style: none;
-      border-top: 1px solid var(--line);
+      border-top: 1px solid var(--border-soft);
     }
 
     .rule-list li,
     .plain-list li {
       padding: 13px 0;
-      border-bottom: 1px solid var(--line);
-      color: var(--text);
+      border-bottom: 1px solid var(--border-soft);
+      color: var(--dark-warm);
       font-size: 13px;
-    }
-
-    .muted {
-      color: var(--muted);
+      line-height: 1.55;
     }
 
     .quote-table {
-      border-top: 1px solid var(--line-strong);
+      border-top: 1px solid var(--border-soft);
     }
 
     .quote-item {
@@ -178,22 +177,28 @@
       grid-template-columns: 1.25fr 0.75fr 0.9fr;
       gap: 18px;
       align-items: start;
-      padding: 20px 0;
-      border-bottom: 1px solid var(--line);
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border-soft);
     }
 
     .quote-item p {
       margin: 0;
-      color: var(--muted);
+      color: var(--olive);
       font-size: 13px;
+      line-height: 1.55;
     }
 
     .quote-label {
-      color: var(--muted-2);
-      font-size: 11px;
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 5px 10px;
+      background: var(--tag-bg);
+      color: var(--brand);
+      font-size: 10px;
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      margin-bottom: 8px;
+      border-radius: 999px;
     }
 
     .price {
@@ -201,14 +206,14 @@
       font-size: 36px;
       line-height: 1.02;
       letter-spacing: -0.05em;
-      color: var(--ink);
+      color: var(--near-black);
       text-align: right;
       white-space: nowrap;
     }
 
     .price-sub {
       margin-top: 8px;
-      color: var(--muted-2);
+      color: var(--stone);
       font-size: 11px;
       text-align: right;
       letter-spacing: 0.10em;
@@ -218,45 +223,43 @@
     .subquote {
       margin-top: 12px;
       padding-top: 12px;
-      border-top: 1px dashed rgba(243,239,230,0.10);
-      color: var(--muted);
+      border-top: 1px dashed var(--border-soft);
+      color: var(--olive);
       font-size: 12px;
-      line-height: 1.7;
+      line-height: 1.65;
     }
 
     .workflow-box {
-      padding: 22px 0 0;
-      border-top: 1px solid var(--line-strong);
+      padding-top: 20px;
+      border-top: 1px solid var(--border-soft);
     }
 
     .footer-note {
-      margin-top: 20px;
+      margin-top: 24px;
       padding-top: 16px;
-      border-top: 1px solid var(--line);
-      color: var(--muted-2);
+      border-top: 1px solid var(--border-soft);
+      color: var(--stone);
       font-size: 12px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
     @media (max-width: 860px) {
-      .page { padding: 40px 18px 64px; }
+      .page { padding: 40px 18px 72px; }
       .section-head,
       .grid-2,
       .quote-item {
         grid-template-columns: 1fr;
       }
       .price, .price-sub { text-align: left; }
-      h1 { font-size: 42px; }
+      h1 { font-size: 44px; }
     }
 
     @media print {
-      body { background: #fff; color: #111; }
+      @page { size: A4; margin: 14mm 16mm; }
+      body { background: var(--parchment); print-color-adjust: exact; -webkit-print-color-adjust: exact; }
       .page { padding: 0; }
-      .eyebrow, .hero-meta, .section-index, .quote-label, .footer-note { color: #666; }
-      h1, h2, .col h3, .quote-item h3, .workflow-box h3, .price { color: #111; }
-      .subtitle, .muted, .quote-item p, .subquote, .rule-list li, .plain-list li { color: #444; }
-      .hero, .section-head, .rule-list, .plain-list, .quote-table, .workflow-box { border-color: #ddd; }
+      section, .quote-item, .workflow-box, .grid-2 { break-inside: avoid; }
     }
   </style>
 </head>
@@ -269,7 +272,7 @@
       <div class="hero-meta">
         <span><b>Document</b> Quote Reference</span>
         <span><b>Scope</b> App / Web / Brand / AI Workflow</span>
-        <span><b>Status</b> Draft v4</span>
+        <span><b>Status</b> Draft v5</span>
       </div>
     </header>
 
@@ -386,37 +389,25 @@
             <div class="price-sub">基础视觉搭建</div>
           </div>
         </article>
+
+        <article class="quote-item">
+          <div>
+            <div class="quote-label">Workflow</div>
+            <h3>AI 工作流协作</h3>
+            <p>适用于关键页面方向定义、可复用规则沉淀，以及标准化页面的后续提效协作。</p>
+          </div>
+          <div></div>
+          <div>
+            <div class="price">¥10,000 – ¥20,000</div>
+            <div class="price-sub">独立阶段 / 统筹评估</div>
+          </div>
+        </article>
       </div>
     </section>
 
     <section>
       <div class="section-head">
-        <div class="section-index">05 / AI 工作流协作</div>
-        <div><h2>AI 工作流协作</h2></div>
-      </div>
-      <div class="workflow-box">
-        <div class="grid-2">
-          <div class="col">
-            <h3>协作内容</h3>
-            <ul class="rule-list">
-              <li>先完成关键页面与整体视觉方向定义</li>
-              <li>沉淀可复用的页面结构、视觉规则与协作方式</li>
-              <li>后续针对标准化页面结合 AI workflow 提升输出效率</li>
-              <li>在提高效率的同时保持整体设计语言一致</li>
-            </ul>
-          </div>
-          <div class="col">
-            <h3>参考报价</h3>
-            <div class="price" style="text-align:left; margin-top: 18px;">¥10,000 – ¥20,000</div>
-            <div class="subquote" style="border-top:none; padding-top:12px; margin-top:12px;">可作为独立协作阶段，也可与具体设计项目一起统筹评估。</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-head">
-        <div class="section-index">06 / 补充说明</div>
+        <div class="section-index">05 / 补充说明</div>
         <div><h2>补充说明</h2></div>
       </div>
       <ul class="plain-list">
