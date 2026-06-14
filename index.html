@@ -7,18 +7,18 @@
   <style>
     :root {
       --bg: #0b0d10;
-      --panel: #0f1216;
+      --panel: #0e1115;
       --panel-soft: #12161b;
-      --ink: #f2f1ec;
-      --text: rgba(242,241,236,0.9);
-      --muted: rgba(242,241,236,0.58);
-      --muted-2: rgba(242,241,236,0.38);
-      --line: rgba(242,241,236,0.10);
-      --line-strong: rgba(242,241,236,0.18);
-      --accent: #93b8c7;
-      --accent-soft: rgba(147,184,199,0.12);
-      --max: 1040px;
-      --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Songti SC", "STSong", serif;
+      --ink: #f3efe6;
+      --text: rgba(243,239,230,0.9);
+      --muted: rgba(243,239,230,0.56);
+      --muted-2: rgba(243,239,230,0.34);
+      --line: rgba(243,239,230,0.09);
+      --line-strong: rgba(243,239,230,0.16);
+      --accent: #8ea9b9;
+      --accent-soft: rgba(142,169,185,0.12);
+      --max: 980px;
+      --serif: "Times New Roman", "Iowan Old Style", "Palatino Linotype", Georgia, "Songti SC", "STSong", serif;
       --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", sans-serif;
       --mono: "SF Mono", "JetBrains Mono", Menlo, monospace;
     }
@@ -39,7 +39,7 @@
     .page {
       max-width: var(--max);
       margin: 0 auto;
-      padding: 84px 56px 100px;
+      padding: 92px 52px 110px;
     }
 
     .eyebrow {
@@ -69,29 +69,29 @@
     h1 {
       margin: 0;
       font-family: var(--serif);
-      font-size: clamp(42px, 6vw, 72px);
-      line-height: 1.03;
-      letter-spacing: -0.04em;
+      font-size: clamp(46px, 6vw, 78px);
+      line-height: 1.01;
+      letter-spacing: -0.05em;
       font-weight: 500;
       color: var(--ink);
-      max-width: 760px;
+      max-width: 720px;
     }
 
     .subtitle {
-      margin: 18px 0 0;
-      max-width: 760px;
+      margin: 20px 0 0;
+      max-width: 720px;
       color: var(--muted);
-      font-size: 15px;
+      font-size: 14px;
     }
 
     .hero-meta {
-      margin-top: 24px;
+      margin-top: 30px;
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 22px;
       color: var(--muted-2);
-      font-size: 12px;
-      letter-spacing: 0.04em;
+      font-size: 11px;
+      letter-spacing: 0.10em;
       text-transform: uppercase;
     }
 
@@ -106,10 +106,10 @@
 
     .section-head {
       display: grid;
-      grid-template-columns: 170px 1fr;
-      gap: 24px;
-      padding-bottom: 14px;
-      margin-bottom: 18px;
+      grid-template-columns: 160px 1fr;
+      gap: 22px;
+      padding-bottom: 16px;
+      margin-bottom: 20px;
       border-bottom: 1px solid var(--line);
     }
 
@@ -124,9 +124,9 @@
     h2 {
       margin: 0;
       font-family: var(--serif);
-      font-size: 30px;
-      line-height: 1.15;
-      letter-spacing: -0.03em;
+      font-size: 32px;
+      line-height: 1.12;
+      letter-spacing: -0.035em;
       font-weight: 500;
       color: var(--ink);
     }
@@ -134,16 +134,16 @@
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 26px;
+      gap: 32px;
     }
 
     .col h3,
     .quote-item h3,
     .workflow-box h3 {
-      margin: 0 0 10px;
+      margin: 0 0 12px;
       font-family: var(--serif);
-      font-size: 20px;
-      line-height: 1.25;
+      font-size: 21px;
+      line-height: 1.22;
       font-weight: 500;
       color: var(--ink);
       letter-spacing: -0.02em;
@@ -159,10 +159,10 @@
 
     .rule-list li,
     .plain-list li {
-      padding: 12px 0;
+      padding: 13px 0;
       border-bottom: 1px solid var(--line);
       color: var(--text);
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .muted {
@@ -175,17 +175,17 @@
 
     .quote-item {
       display: grid;
-      grid-template-columns: 1.2fr 0.9fr 0.9fr;
-      gap: 20px;
+      grid-template-columns: 1.25fr 0.75fr 0.9fr;
+      gap: 18px;
       align-items: start;
-      padding: 18px 0;
+      padding: 20px 0;
       border-bottom: 1px solid var(--line);
     }
 
     .quote-item p {
       margin: 0;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .quote-label {
@@ -198,27 +198,30 @@
 
     .price {
       font-family: var(--serif);
-      font-size: 34px;
-      line-height: 1.05;
-      letter-spacing: -0.04em;
+      font-size: 36px;
+      line-height: 1.02;
+      letter-spacing: -0.05em;
       color: var(--ink);
       text-align: right;
       white-space: nowrap;
     }
 
     .price-sub {
-      margin-top: 6px;
+      margin-top: 8px;
       color: var(--muted-2);
-      font-size: 12px;
+      font-size: 11px;
       text-align: right;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
     }
 
     .subquote {
-      margin-top: 10px;
-      padding-top: 10px;
-      border-top: 1px dashed rgba(242,241,236,0.12);
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(243,239,230,0.10);
       color: var(--muted);
-      font-size: 13px;
+      font-size: 12px;
+      line-height: 1.7;
     }
 
     .workflow-box {
@@ -266,7 +269,7 @@
       <div class="hero-meta">
         <span><b>Document</b> Quote Reference</span>
         <span><b>Scope</b> App / Web / Brand / AI Workflow</span>
-        <span><b>Status</b> Draft v3</span>
+        <span><b>Status</b> Draft v4</span>
       </div>
     </header>
 
