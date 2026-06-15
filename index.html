@@ -6,32 +6,27 @@
   <title>AI 医疗 / 心理健康产品设计合作报价参考</title>
   <style>
     :root {
-      --parchment: #f5f4ed;
-      --ivory: #faf9f5;
-      --warm-sand: #e8e6dc;
-      --brand: #1B365D;
-      --brand-light: #2D5A8A;
-      --near-black: #141413;
-      --dark-warm: #3d3d3a;
-      --olive: #504e49;
-      --stone: #6b6a64;
-      --border: #e8e6dc;
-      --border-soft: #e5e3d8;
-      --tag-bg: #E4ECF5;
-      --max: 980px;
-      --serif: Charter, Georgia, "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", Palatino, serif;
+      --paper: #f5f4ed;
+      --surface: rgba(255,255,255,0.26);
+      --surface-strong: rgba(255,255,255,0.36);
+      --ink: #171614;
+      --muted: #5d5951;
+      --soft: #8b8479;
+      --rule: rgba(23,22,20,0.08);
+      --accent: #1b365d;
+      --max: 920px;
+      --serif: Charter, Georgia, "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", serif;
       --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
-      --mono: "SF Mono", "JetBrains Mono", Menlo, monospace;
     }
 
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; }
+
     body {
-      background: var(--parchment);
-      color: var(--near-black);
+      background: var(--paper);
+      color: var(--ink);
       font-family: var(--sans);
-      line-height: 1.55;
-      letter-spacing: 0.01em;
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -39,273 +34,228 @@
     .page {
       max-width: var(--max);
       margin: 0 auto;
-      padding: 88px 56px 120px;
-    }
-
-    .eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--stone);
-      margin-bottom: 18px;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 28px;
-      height: 1px;
-      background: linear-gradient(90deg, var(--brand), transparent);
+      padding: 76px 48px 96px;
     }
 
     .hero {
-      padding-bottom: 40px;
-      margin-bottom: 48px;
-      border-bottom: 1px solid var(--border-soft);
+      margin-bottom: 40px;
     }
 
     h1 {
       margin: 0;
+      max-width: 760px;
       font-family: var(--serif);
-      font-size: clamp(48px, 6vw, 82px);
-      line-height: 1.02;
-      letter-spacing: -0.045em;
-      font-weight: 500;
-      color: var(--near-black);
-      max-width: 720px;
-    }
-
-    .subtitle {
-      margin: 20px 0 0;
-      max-width: 720px;
-      color: var(--olive);
-      font-size: 14px;
-      line-height: 1.55;
-    }
-
-    .hero-meta {
-      margin-top: 28px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 22px;
-      color: var(--stone);
-      font-size: 11px;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-    }
-
-    .hero-meta span b {
-      color: var(--dark-warm);
+      font-size: clamp(40px, 5.2vw, 64px);
+      line-height: 1.06;
+      letter-spacing: -0.04em;
       font-weight: 500;
     }
 
-    section {
-      margin-bottom: 42px;
+    .intro {
+      margin: 16px 0 0;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 15px;
     }
 
-    .section-head {
-      display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 22px;
-      padding-bottom: 16px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid var(--border-soft);
-    }
-
-    .section-index {
-      color: var(--stone);
-      font-size: 12px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding-top: 5px;
+    .section {
+      margin-bottom: 14px;
+      padding: 22px 24px;
+      background: var(--surface);
+      border-radius: 12px;
     }
 
     h2 {
-      margin: 0;
+      margin: 0 0 14px;
       font-family: var(--serif);
-      font-size: 32px;
-      line-height: 1.12;
+      font-size: 28px;
+      line-height: 1.16;
       letter-spacing: -0.03em;
       font-weight: 500;
-      color: var(--near-black);
+    }
+
+    .summary {
+      color: var(--muted);
+      font-size: 14px;
     }
 
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 32px;
+      gap: 12px;
     }
 
-    .col h3,
-    .quote-item h3,
-    .workflow-box h3 {
-      margin: 0 0 12px;
+    .cell {
+      padding: 16px 16px 14px;
+      background: var(--surface-strong);
+      border-radius: 10px;
+    }
+
+    .cell-title {
+      margin: 0 0 10px;
       font-family: var(--serif);
-      font-size: 21px;
-      line-height: 1.22;
+      font-size: 20px;
+      line-height: 1.2;
       font-weight: 500;
-      color: var(--near-black);
-      letter-spacing: -0.02em;
     }
 
-    .rule-list,
-    .plain-list {
+    ul {
       margin: 0;
       padding: 0;
       list-style: none;
-      border-top: 1px solid var(--border-soft);
     }
 
-    .rule-list li,
-    .plain-list li {
-      padding: 13px 0;
-      border-bottom: 1px solid var(--border-soft);
-      color: var(--dark-warm);
-      font-size: 13px;
-      line-height: 1.55;
+    li {
+      position: relative;
+      margin-bottom: 8px;
+      padding-left: 14px;
+      color: var(--muted);
+      font-size: 14px;
     }
 
-    .quote-table {
-      border-top: 1px solid var(--border-soft);
+    li:last-child { margin-bottom: 0; }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: rgba(27, 54, 93, 0.18);
     }
 
-    .quote-item {
+    .price-list {
       display: grid;
-      grid-template-columns: 1.25fr 0.75fr 0.9fr;
+      gap: 8px;
+    }
+
+    .price-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.72fr);
       gap: 18px;
-      align-items: start;
-      padding: 22px 0;
-      border-bottom: 1px solid var(--border-soft);
+      padding: 18px 0;
+      border-top: 1px solid var(--rule);
     }
 
-    .quote-item p {
+    .price-row:first-child { border-top: none; padding-top: 0; }
+    .price-row:last-child { padding-bottom: 0; }
+
+    .item-name {
+      margin: 0 0 6px;
+      font-family: var(--serif);
+      font-size: 22px;
+      line-height: 1.18;
+      font-weight: 500;
+    }
+
+    .item-desc {
       margin: 0;
-      color: var(--olive);
-      font-size: 13px;
-      line-height: 1.55;
+      color: var(--muted);
+      font-size: 14px;
     }
 
-    .quote-label {
-      display: inline-block;
-      margin-bottom: 10px;
-      padding: 5px 10px;
-      background: var(--tag-bg);
-      color: var(--brand);
-      font-size: 10px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      border-radius: 999px;
+    .item-note {
+      margin-top: 8px;
+      color: var(--soft);
+      font-size: 13px;
+    }
+
+    .price-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      text-align: right;
     }
 
     .price {
       font-family: var(--serif);
-      font-size: 36px;
-      line-height: 1.02;
+      font-size: 34px;
+      line-height: 1.04;
       letter-spacing: -0.05em;
-      color: var(--near-black);
-      text-align: right;
       white-space: nowrap;
     }
 
     .price-sub {
-      margin-top: 8px;
-      color: var(--stone);
-      font-size: 11px;
-      text-align: right;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-    }
-
-    .subquote {
-      margin-top: 12px;
-      padding-top: 12px;
-      border-top: 1px dashed var(--border-soft);
-      color: var(--olive);
+      margin-top: 6px;
+      color: var(--soft);
       font-size: 12px;
-      line-height: 1.65;
     }
 
-    .workflow-box {
-      padding-top: 20px;
-      border-top: 1px solid var(--border-soft);
-    }
-
-    .footer-note {
-      margin-top: 24px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border-soft);
-      color: var(--stone);
+    .footer {
+      margin-top: 16px;
+      color: var(--soft);
       font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
     }
 
     @media (max-width: 860px) {
-      .page { padding: 40px 18px 72px; }
-      .section-head,
+      .page { padding: 36px 18px 56px; }
       .grid-2,
-      .quote-item {
-        grid-template-columns: 1fr;
-      }
-      .price, .price-sub { text-align: left; }
-      h1 { font-size: 44px; }
+      .price-row { grid-template-columns: 1fr; }
+      .section { padding: 18px 16px; }
+      .cell { padding: 14px; }
+      .price-box { align-items: flex-start; text-align: left; }
+      .price { font-size: 30px; }
+      h1 { font-size: 40px; }
+      h2 { font-size: 25px; }
     }
 
     @media print {
-      @page { size: A4; margin: 14mm 16mm; }
-      body { background: var(--parchment); print-color-adjust: exact; -webkit-print-color-adjust: exact; }
-      .page { padding: 0; }
-      section, .quote-item, .workflow-box, .grid-2 { break-inside: avoid; }
+      @page { size: A4; margin: 0; }
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: var(--paper);
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+      body { width: 210mm; }
+      .page {
+        max-width: none;
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0;
+        padding: 16mm 14mm 18mm;
+      }
+      .section, .cell, .price-row { break-inside: avoid; }
     }
   </style>
 </head>
 <body>
   <main class="page">
     <header class="hero">
-      <div class="eyebrow">AI 医疗 / 心理健康产品</div>
-      <h1>设计合作报价参考</h1>
-      <p class="subtitle">适用于 App、官网与品牌视觉相关项目。此版本主要用于前期预算沟通，便于先确认合作范围、项目重点与大致投入。</p>
-      <div class="hero-meta">
-        <span><b>Document</b> Quote Reference</span>
-        <span><b>Scope</b> App / Web / Brand / AI Workflow</span>
-        <span><b>Status</b> Draft v5</span>
-      </div>
+      <h1>AI 医疗 / 心理健康产品设计合作报价参考</h1>
+      <p class="intro">适用于 App、官网、品牌视觉及 AI 设计工作流相关合作。此版本用于前期预算沟通，方便先确认范围、重点与大致投入。</p>
     </header>
 
-    <section>
-      <div class="section-head">
-        <div class="section-index">01 / 项目背景理解</div>
-        <div><h2>项目背景理解</h2></div>
+    <section class="section">
+      <h2>项目背景</h2>
+      <div class="summary">
+        <ul>
+          <li>适用于 AI 医疗 / 心理健康方向的 App、官网与品牌视觉项目。</li>
+          <li>当前阶段更适合先建立统一的视觉方向，再逐步扩展到更多页面与触点。</li>
+          <li>此版本用于前期预算参考，不作为最终定稿报价。</li>
+        </ul>
       </div>
-      <ul class="plain-list">
-        <li>适用于 AI 医疗 / 心理健康方向的 App、官网与品牌视觉项目。</li>
-        <li>当前阶段更适合先建立统一的视觉方向，再逐步扩展到更多页面与触点。</li>
-        <li>此版本用于前期预算参考，不作为最终定稿报价。</li>
-      </ul>
     </section>
 
-    <section>
-      <div class="section-head">
-        <div class="section-index">02 / 合作角色定位</div>
-        <div><h2>合作角色定位</h2></div>
-      </div>
+    <section class="section">
+      <h2>合作角色</h2>
       <div class="grid-2">
-        <div class="col">
-          <h3>角色</h3>
-          <ul class="rule-list">
+        <div class="cell">
+          <div class="cell-title">合作内容</div>
+          <ul>
             <li>外部视觉负责人</li>
             <li>关键页面设计与方向定义</li>
             <li>官网与产品视觉统一</li>
             <li>后续执行协作支持</li>
           </ul>
         </div>
-        <div class="col">
-          <h3>价值</h3>
-          <ul class="rule-list">
+        <div class="cell">
+          <div class="cell-title">合作价值</div>
+          <ul>
             <li>减少视觉方向反复试错</li>
             <li>提升整体一致性</li>
             <li>降低返工成本</li>
@@ -315,24 +265,21 @@
       </div>
     </section>
 
-    <section>
-      <div class="section-head">
-        <div class="section-index">03 / 合作内容范围</div>
-        <div><h2>合作内容范围</h2></div>
-      </div>
+    <section class="section">
+      <h2>合作范围</h2>
       <div class="grid-2">
-        <div class="col">
-          <h3>设计内容</h3>
-          <ul class="rule-list">
+        <div class="cell">
+          <div class="cell-title">设计内容</div>
+          <ul>
             <li>App 关键页面与核心流程设计</li>
             <li>官网首页及核心内页视觉设计</li>
             <li>品牌基础视觉方向梳理</li>
             <li>设计语言与页面风格统一建议</li>
           </ul>
         </div>
-        <div class="col">
-          <h3>合作方式</h3>
-          <ul class="rule-list">
+        <div class="cell">
+          <div class="cell-title">合作方式</div>
+          <ul>
             <li>先完成关键页面与重点模块</li>
             <li>再根据进展扩展范围</li>
             <li>沉淀可复用的视觉规则</li>
@@ -342,62 +289,50 @@
       </div>
     </section>
 
-    <section>
-      <div class="section-head">
-        <div class="section-index">04 / 专项项目合作报价</div>
-        <div><h2>专项项目合作报价</h2></div>
-      </div>
-
-      <div class="quote-table">
-        <article class="quote-item">
+    <section class="section">
+      <h2>合作报价</h2>
+      <div class="price-list">
+        <article class="price-row">
           <div>
-            <div class="quote-label">App</div>
-            <h3>App 产品设计</h3>
-            <p>适用于首页、核心流程、重点功能页，以及一个阶段内的核心产品界面设计。</p>
-            <div class="subquote">关键页面：¥1,500 – ¥3,000 / 页<br>普通页面：¥800 – ¥1,500 / 页</div>
+            <div class="item-name">App 产品设计</div>
+            <p class="item-desc">适用于首页、核心流程、重点功能页，以及一个阶段内的核心产品界面设计。</p>
+            <div class="item-note">关键页面：¥1,500 – ¥3,000 / 页　普通页面：¥800 – ¥1,500 / 页</div>
           </div>
-          <div></div>
-          <div>
+          <div class="price-box">
             <div class="price">¥30,000 – ¥50,000</div>
             <div class="price-sub">阶段整体评估</div>
           </div>
         </article>
 
-        <article class="quote-item">
+        <article class="price-row">
           <div>
-            <div class="quote-label">Web</div>
-            <h3>官网设计</h3>
-            <p>适用于官网首页及核心内页的阶段性视觉设计，更适合按整体项目评估。</p>
+            <div class="item-name">官网设计</div>
+            <p class="item-desc">适用于官网首页及核心内页的阶段性视觉设计，更适合按整体项目评估。</p>
           </div>
-          <div></div>
-          <div>
+          <div class="price-box">
             <div class="price">¥20,000 – ¥30,000</div>
             <div class="price-sub">整体项目评估</div>
           </div>
         </article>
 
-        <article class="quote-item">
+        <article class="price-row">
           <div>
-            <div class="quote-label">Brand</div>
-            <h3>品牌视觉</h3>
-            <p>适用于品牌基础视觉方向、色彩、字体以及整体表达方式的建立与统一。</p>
-            <div class="subquote">完整品牌 VI：¥27,000 起</div>
+            <div class="item-name">品牌视觉</div>
+            <p class="item-desc">适用于品牌基础视觉方向、色彩、字体以及整体表达方式的建立与统一。</p>
+            <div class="item-note">完整品牌 VI：¥27,000 起</div>
           </div>
-          <div></div>
-          <div>
+          <div class="price-box">
             <div class="price">¥15,000 – ¥20,000</div>
             <div class="price-sub">基础视觉搭建</div>
           </div>
         </article>
 
-        <article class="quote-item">
+        <article class="price-row">
           <div>
-            <div class="quote-label">Workflow</div>
-            <h3>AI 工作流协作</h3>
-            <p>适用于关键页面方向定义、可复用规则沉淀，以及标准化页面的后续提效协作。</p>
+            <div class="item-name">AI 工作流协作</div>
+            <p class="item-desc">适用于关键页面方向定义、可复用规则沉淀，以及标准化页面的后续提效协作。</p>
           </div>
-          <div></div>
-          <div>
+          <div class="price-box">
             <div class="price">¥10,000 – ¥20,000</div>
             <div class="price-sub">独立阶段 / 统筹评估</div>
           </div>
@@ -405,19 +340,16 @@
       </div>
     </section>
 
-    <section>
-      <div class="section-head">
-        <div class="section-index">05 / 补充说明</div>
-        <div><h2>补充说明</h2></div>
-      </div>
-      <ul class="plain-list">
+    <section class="section">
+      <h2>补充说明</h2>
+      <ul>
         <li>以上为阶段性参考报价，便于前期沟通时快速判断预算范围。</li>
         <li>最终价格会根据页面数量、复杂度、交付要求及合作范围进一步确认。</li>
         <li>如后续项目范围更明确，也可以按单个专题或单个阶段做更细的报价拆分。</li>
       </ul>
     </section>
 
-    <div class="footer-note">AI Medical / Mental Health Product Design Quote Reference</div>
+    <div class="footer">以上内容用于项目初步沟通参考。</div>
   </main>
 </body>
 </html>
